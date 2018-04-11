@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08c6565e0530e74d8d2ecb23463daa7, type: 3}
+  m_Name: Default Terrain
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  uniformScale: 2.5
+  useFlatShading: 0
+  useFalloff: 1
+  meshHeightMultiplier: 11.27
+  meshHeightCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.030761719
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.46127144
+      value: 0.18911618
+      inSlope: -0.022867125
+      outSlope: -0.022867125
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.6596576
+      value: 0.26268983
+      inSlope: -0.1869365
+      outSlope: -0.1869365
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.82107675
+      value: 0.5662913
+      inSlope: 3.488596
+      outSlope: 3.488596
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1.0848329
+      value: 1.1692232
+      inSlope: 5.851438
+      outSlope: 5.851438
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
