@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: mMesh
   m_Shader: {fileID: 4800000, guid: 07de20b0ad213ec46b8eb6a630a9ebb2, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _FACES_X
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -91,7 +91,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - testTexture:
-        m_Texture: {fileID: 2800000, guid: c6e0767b1f8c34890ac245217f4b9731, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -99,6 +99,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Faces: 0
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1

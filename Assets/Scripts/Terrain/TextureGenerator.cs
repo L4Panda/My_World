@@ -13,13 +13,12 @@ public static class TextureGenerator
         texture.Apply();
         return texture;
     }
-
-
+    //------------------------------------------------------------------------------
     public static Texture2D TextureFromHeightMap(float[,] heightMap)
     {
         int width = heightMap.GetLength(0);
         int height = heightMap.GetLength(1);
-
+    
         Color[] colourMap = new Color[width * height];
         for (int y = 0; y < height; y++)
         {
@@ -31,5 +30,21 @@ public static class TextureGenerator
 
         return TextureFromColourMap(colourMap, width, height);
     }
+    //------------------------------------------------------------------------------
+    public static Texture2D CreateTexture(int width, int height)
+    {
+        
+        Texture2D texture = new Texture2D(width, height, TextureFormat.ARGB32, false);
+        texture.filterMode = FilterMode.Point;
 
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                texture.SetPixel(j, height - 1 - i, Color.red);
+            }
+        }
+        texture.Apply();
+        return texture;
+    }
 }
