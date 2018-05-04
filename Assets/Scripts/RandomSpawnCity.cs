@@ -31,7 +31,8 @@ public class RandomSpawnCity : MonoBehaviour
             {
                 randPos = GetRandomPoint();
             }
-            
+
+            prefab = prefabs[(int)Rand(0, prefabs.Length)];
             var pfn = "P" + i;
             Gen(pfn, randPos);
 

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public GameObject backpack;
-    public Inventory inventory;
     public float mouseSensitivityX = 250f;
     public float mouseSensitivityY = 250f;
     public Camera cam; // The camera in the scene
@@ -36,11 +34,9 @@ public class PlayerController : MonoBehaviour {
     void Update()
     {
         Vector3 pos = cam.WorldToScreenPoint(this.transform.position);
-        backpack.transform.position = pos;
-        inventory.transform.position = pos;
         transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivityX);
         verticalLookRotation += Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensitivityY;
-        verticalLookRotation = Mathf.Clamp(verticalLookRotation, -60, 60);
+        verticalLookRotation = Mathf.Clamp(verticalLookRotation, -5, 60);
         cameraT.localEulerAngles = Vector3.left * verticalLookRotation;
         moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
         

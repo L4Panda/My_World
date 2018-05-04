@@ -24,9 +24,10 @@ public class RandomObjects : MonoBehaviour {
         for (int i = 0; i < collectables.Length; i++)
         {
             collectable = collectables[i];
-
-            Gen("P" + i);
+            
             var pfn = "P" + i;
+            Gen(pfn);
+            
         }
     }
     //------------------------------------------------------------------
@@ -36,12 +37,20 @@ public class RandomObjects : MonoBehaviour {
         /// using the GetRandomPoint() function
         var randPos = GetRandomPoint(); // Generated random position
 
+        if(collectable.tag == "Beach")
+            {
+                if(randPos.y >= 1)
+                {
+                randPos = GetRandomPoint();
+                }
+            }
+
+
         var go = Instantiate(collectable, randPos, Quaternion.identity); // Generate the prefab using the random position and world position
         var v = transform.eulerAngles;
         v.y = Rand(0, 360);
         go.transform.eulerAngles = v;
         go.transform.parent = parent.transform;
-        go.transform.localScale = new Vector3(1f, 1f, 1f);
         go.name = name; // Name the prefab
     }
     //------------------------------------------------------------------
